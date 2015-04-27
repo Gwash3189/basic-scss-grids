@@ -1,0 +1,53 @@
+$big-screen: 993px;
+$mid-screen: 992px;
+$sm-screen: 768px;
+
+@mixin query($media){
+ @if $media == $sm-screen {
+   @media only screen and (max-width: $sm-screen){
+     @content
+   }
+ } @else if $media == $mid-screen {
+   @media only screen and (max-width: $mid-screen){
+     @content
+   }
+ } @else if $media == $big-screen {
+   @media only screen and (min-width: $big-screen) { 
+     @content;
+  }
+ }
+}
+
+@mixin size($percent){
+  width: $percent;
+  float: left;
+}
+
+.red {
+  background-color: red;
+}
+
+.container {
+  float:left;
+  width: 90%;
+  padding-left: 5%;
+  @include query($big-screen){
+    .big {@include size(100%)}
+    .med {@include size(50%)}
+    .sm {@include size(25%)}
+    .xs {@include size(12.5%)}
+  }
+  @include query($mid-screen){
+    .big {@include size(100%)}
+    .med {@include size(50%)}
+    .sm {@include size(25%)}
+    .xs {@include size(12.5%)}
+    .all {@include size(100%)}
+  }
+  @include query($sm-screen){
+    .big {@include size(100%)}
+    .med {@include size(100%)}
+    .sm {@include size(100%)}
+    .xs {@include size(12.5%)}
+  }
+}
