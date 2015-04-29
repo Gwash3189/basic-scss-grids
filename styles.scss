@@ -29,20 +29,20 @@ $sm-screen: 768px;
   padding-left: 5%;
   @include query($big-screen){
     .big {@include size(100%)}
-    .med {@include size(50%)}
+    .mid {@include size(50%)}
     .sm {@include size(25%)}
     .xs {@include size(12.5%)}
   }
   @include query($mid-screen){
     .big {@include size(100%)}
-    .med {@include size(50%)}
+    .mid {@include size(50%)}
     .sm {@include size(25%)}
     .xs {@include size(12.5%)}
     .all {@include size(100%)}
   }
   @include query($sm-screen){
     .big {@include size(100%)}
-    .med {@include size(100%)}
+    .mid {@include size(100%)}
     .sm {@include size(100%)}
     .xs {@include size(12.5%)}
   }
