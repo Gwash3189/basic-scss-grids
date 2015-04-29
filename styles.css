@@ -27,9 +27,6 @@
       float: left; }
     .container .xs {
       width: 12.5%;
-      float: left; }
-    .container .all {
-      width: 100%;
       float: left; } }
   @media only screen and (max-width: 768px) {
     .container .big {

@@ -38,7 +38,6 @@ $sm-screen: 768px;
     .mid {@include size(50%)}
     .sm {@include size(25%)}
     .xs {@include size(12.5%)}
-    .all {@include size(100%)}
   }
   @include query($sm-screen){
     .big {@include size(100%)}
