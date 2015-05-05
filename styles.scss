@@ -34,15 +34,27 @@ $sm-screen: 768px;
     .xs {@include size(12.5%)}
   }
   @include query($mid-screen){
-    .big {@include size(100%)}
+    .big {@include size(100%); display: none;}
     .mid {@include size(50%)}
     .sm {@include size(25%)}
     .xs {@include size(12.5%)}
   }
   @include query($sm-screen){
-    .big {@include size(100%)}
-    .mid {@include size(100%)}
+    .big {
+      @include size(100%); 
+      display: none;
+    }
+    .mid {@include size(100%); display: none;}
     .sm {@include size(100%)}
     .xs {@include size(12.5%)}
+  }
+  .as-sm {
+    @include size(25%);
+  }
+  .as-mid {
+    @include size(50%);
+  }
+  .as-big {
+    @include size(100%)
   }
 }

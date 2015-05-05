@@ -1,0 +1,31 @@
+{
+  "name": "basic-scss-grids",
+  "version": "1.0.0",
+  "description": "basic responsive grids ",
+  "main": "styles.min.css",
+  "scripts": {
+    "build:min": "node-sass --output-style compressed styles.scss styles.min.css",
+    "build:expanded": "node-sass --output-style expanded styles.scss styles.css",
+    "build": "npm run build:expanded && npm run build:min",
+    "watch": "node-sass --watch --output-style expanded styles.scss styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gwash3189/basic-scss-grids.git"
+  },
+  "keywords": [
+    "grids",
+    "scss",
+    "responsive",
+    "basic"
+  ],
+  "author": "Adam Beck <beck.web.adam@gmail.c.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Gwash3189/basic-scss-grids/issues"
+  },
+  "homepage": "https://github.com/Gwash3189/basic-scss-grids",
+  "devDependencies": {
+    "node-sass": "^2.1.1"
+  }
+}
